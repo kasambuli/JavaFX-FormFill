@@ -3,32 +3,32 @@
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<!--<BorderPane id="BorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="700.0" xmlns:fx="http://javafx.com/fxml">-->
+<?import javafx.scene.text.*?>
 
-    <SplitPane focusTraversable="true" prefHeight="700.0" prefWidth="400.0">
-    <GridPane hgap="10.0" vgap="10.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" >
-        <VBox alignment="center" xmlns:fx="http://javafx.com/fxml/1">
+<GridPane hgap="10.0" vgap="10.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
+        <VBox alignment="center" prefWidth="500.0" GridPane.columnIndex="0" xmlns:fx="http://javafx.com/fxml/1">
             <TabPane fx:id="tabPane" prefHeight="700.0" prefWidth="700.0">
                 <tabs>
                     <Tab text="Form Fill">
-
                         <content>
                             <GridPane>
                             <GridPane alignment="center" hgap="10" vgap="10" GridPane.rowIndex="0" xmlns:fx="http://javafx.com/fxml">
                                 <padding><Insets bottom="0" left="40" right="40" top="0" /></padding>
                                 <columnConstraints>
-                                    <ColumnConstraints halignment="RIGHT" maxWidth="Infinity" minWidth="200" prefWidth="200">
+                                    <ColumnConstraints halignment="RIGHT" maxWidth="Infinity" minWidth="250" prefWidth="200">
                                     </ColumnConstraints>
-                                    <ColumnConstraints hgrow="ALWAYS" maxWidth="Infinity" minWidth="200" prefWidth="200">
+                                    <ColumnConstraints hgrow="ALWAYS" maxWidth="Infinity" minWidth="250" prefWidth="200">
                                     </ColumnConstraints>
                                 </columnConstraints>
 
-                                <CheckBox mnemonicParsing="false" text="Automatically fill out any form" GridPane.rowIndex="1" />
+                                <CheckBox mnemonicParsing="false" text="Automatically fill out any form" wrapText="true" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets right="25.0" />
+                           </GridPane.margin>
+                                </CheckBox>
                                 <CheckBox mnemonicParsing="false" text="Ask me before filling out any form" GridPane.rowIndex="2" />
-
-
                             </GridPane>
-                            <GridPane alignment="center" hgap="10" vgap="10" GridPane.rowIndex="1" xmlns:fx="http://javafx.com/fxml">
+                            <GridPane alignment="center" hgap="10" maxWidth="400.0" prefWidth="400.0" vgap="10" GridPane.rowIndex="1" xmlns:fx="http://javafx.com/fxml">
                                 <padding><Insets bottom="20" left="0" right="90" top="0" /></padding>
                                 <columnConstraints>
                                     <ColumnConstraints halignment="RIGHT" maxWidth="Infinity" minWidth="100" prefWidth="150">
@@ -49,47 +49,45 @@
                                 </Label>
                                 <TextField fx:id="emailField" prefHeight="40" GridPane.columnIndex="1" GridPane.rowIndex="5" />
 
-                                <Label text="Phone Number" GridPane.columnIndex="0" GridPane.rowIndex="6">
+                                <Label text="Phone Number :" GridPane.columnIndex="0" GridPane.rowIndex="6">
                                 </Label>
                                 <TextField fx:id="numberField" prefHeight="40" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-
                             </GridPane>
                                 <GridPane alignment="center" hgap="10" vgap="10" GridPane.rowIndex="2" xmlns:fx="http://javafx.com/fxml">
                                     <TabPane fx:id="tab2Pane" prefHeight="500.0" prefWidth="700.0">
                                     <tabs>
                                     <Tab text="Primary Address">
-                                        <GridPane alignment="center" hgap="10" vgap="10" GridPane.rowIndex="1" xmlns:fx="http://javafx.com/fxml">
+                                        <GridPane alignment="center" hgap="10" maxWidth="400.0" prefWidth="400.0" vgap="10" GridPane.rowIndex="1" xmlns:fx="http://javafx.com/fxml">
                                         <padding><Insets right="90.0" top="-136.0" /></padding>
                                         <columnConstraints>
-                                            <ColumnConstraints halignment="RIGHT" maxWidth="Infinity" minWidth="200" prefWidth="200">
+                                            <ColumnConstraints halignment="RIGHT" maxWidth="Infinity" minWidth="100" prefWidth="150">
                                             </ColumnConstraints>
-                                            <ColumnConstraints hgrow="ALWAYS" maxWidth="Infinity" minWidth="200" prefWidth="200">
+                                            <ColumnConstraints hgrow="ALWAYS" maxWidth="Infinity" minWidth="100" prefWidth="150">
                                             </ColumnConstraints>
                                         </columnConstraints>
-                                        <Label text="Address 1: " GridPane.columnIndex="0" GridPane.rowIndex="0">
+                                        <Label text="Address 1 : " GridPane.columnIndex="0" GridPane.rowIndex="0">
                                         </Label>
-                                        <TextField fx:id="ameField" prefHeight="26.0" prefWidth="294.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                                        <TextField fx:id="address1Field" prefHeight="26.0" prefWidth="294.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
 
-                                        <Label text="Address 2: " GridPane.columnIndex="0" GridPane.rowIndex="1">
+                                        <Label text="Address 2 : " GridPane.columnIndex="0" GridPane.rowIndex="1">
                                         </Label>
-                                        <TextField fx:id="lameField" prefHeight="26.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                        <TextField fx:id="address2Field" prefHeight="26.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
 
-                                        <Label text="City: " GridPane.columnIndex="0" GridPane.rowIndex="2">
+                                        <Label text="City : " GridPane.columnIndex="0" GridPane.rowIndex="2">
                                         </Label>
-                                        <TextField fx:id="mailField" prefHeight="26.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                        <TextField fx:id="cityField" prefHeight="26.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
 
-                                        <Label text="State/Province" GridPane.columnIndex="0" GridPane.rowIndex="3">
+                                        <Label text="State/Province :" GridPane.columnIndex="0" GridPane.rowIndex="3">
                                         </Label>
-                                        <TextField fx:id="nmberField" prefHeight="26.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                        <TextField fx:id="stateField" prefHeight="26.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
 
-                                            <Label text="Country" GridPane.columnIndex="0" GridPane.rowIndex="4">
+                                            <Label text="Country :" GridPane.columnIndex="0" GridPane.rowIndex="4">
                                             </Label>
-                                            <TextField fx:id="country" prefHeight="26.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                            <TextField fx:id="countryField" prefHeight="26.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
 
-                                            <Label text="Zip/Postal Code" GridPane.columnIndex="0" GridPane.rowIndex="5">
+                                            <Label text="Zip/Postal Code :" GridPane.columnIndex="0" GridPane.rowIndex="5">
                                             </Label>
                                             <TextField fx:id="zipField" prefHeight="26.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-
                                         </GridPane>
                                     </Tab>
                                         <Tab text="Alternate Address" />
@@ -113,9 +111,34 @@
                 <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
              </VBox.margin>
             </TabPane>
-            <Button>Ok</Button>
+
         </VBox>
+    <VBox alignment="center" prefHeight="700.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.columnIndex="1" xmlns:fx="http://javafx.com/fxml/1">
+        <GridPane alignment="center" hgap="10" vgap="10" GridPane.rowIndex="0" xmlns:fx="http://javafx.com/fxml">
+            <padding><Insets top="0" /></padding>
+            <Text text="Click to add or edit your credit information" wrappingWidth="100.0" />
+            <Button>Click Here ...
+                <GridPane.margin><Insets top="100" /></GridPane.margin>
+            </Button>
+        </GridPane>
+        <GridPane alignment="center" hgap="10" vgap="10" GridPane.rowIndex="1" xmlns:fx="http://javafx.com/fxml">
+            <padding><Insets top="100" /></padding>
+
+            <Text text="Click to clear all your Contact or Credit Card information" wrappingWidth="100.0">Click to clear all your Contact or Credit Card information</Text>
+            <Button>Clear All
+                <GridPane.margin><Insets right="0" top="150" /></GridPane.margin>
+            </Button>
+        </GridPane>
+
+
+    </VBox>
+    <GridPane alignment="BOTTOM_RIGHT">
+        <GridPane alignment="center" hgap="10" vgap="10" GridPane.columnIndex="0" xmlns:fx="http://javafx.com/fxml">
+            <Button>Ok</Button>
+        </GridPane>
+        <GridPane alignment="center" hgap="10" vgap="10" GridPane.columnIndex="1" xmlns:fx="http://javafx.com/fxml">
+            <Button>Cancel</Button>
+        </GridPane>
+
     </GridPane>
-    </SplitPane>
-<!--<SplitPane focusTraversable="true" prefHeight="700.0" prefWidth="300.0"></SplitPane>-->
-<!--</BorderPane>-->
+    </GridPane>
